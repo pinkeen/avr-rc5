@@ -1,7 +1,7 @@
 RC5 (36KHz Phillips protocol) Decoding library for AVR
 
 Copyright (c) 2011 Filip Sobalski <pinkeen@gmail.com>
-Based on the idea presented by Guy Carpenter on http://deep.clearwater.com.au/rc5/
+Based on the idea presented by Guy Carpenter on http://www.clearwater.com.au/rc5
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

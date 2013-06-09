@@ -2,7 +2,7 @@
  * RC5 (36KHz Phillips protocol) Decoding library for AVR
  * Copyright (c) 2011 Filip Sobalski <pinkeen@gmail.com>
  * based on the idea presented by Guy Carpenter
- * on http://deep.clearwater.com.au/rc5/
+ * on http://www.clearwater.com.au/rc5
  * 
  * Tested on ATmega328P. Designed for 16MHz crystal.
  * Should work on the ATmega{4/8/16/32}8 family 

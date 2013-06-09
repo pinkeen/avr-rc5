@@ -1,6 +1,8 @@
-# RC5 (36KHz Phillips protocol) Decoding library for AVR
+# RC5 Decoding library for AVR
 
-Based on the idea presented by *Guy Carpenter* on [his site](http://deep.clearwater.com.au/rc5/).
+*36KHz Phillips protocol*
+
+Based on the idea presented by *Guy Carpenter* on [his site](http://www.clearwater.com.au/rc5).
 
 ## What does it do?
 
@@ -28,8 +30,21 @@ Check out the comments in headers/source. Example in `main.{c,h}` included.
 
 ## Does it work?
 
-Yes, it does work flawlessly (at least for me). I built a project on it (*rlamp*) and never had any problems. The sensitivity achieved
+Yes, it does work flawlessly (at least for me). I built a project on it ([rlamp](http://add-a-link-to-github)) and never had any problems. The sensitivity achieved
 with __TSOP2236__ was astounding. I could point the remote anywhere, metres from the receiver and it would pick up
 the signal perfectly with every keypress.
+
+## Some notes
+
+I found an old e-mail that I sent to to Guy Carpenter concerning his very insightful article. He didn't update his website so I am attaching parts of it here
+in case it might be helpful:
+
+> In a highly-constrained 8bit environment the clever trick with transition table and bit shifting saves a lot of cpu time (which is even more important if code is executed in interrupts) so the snippet you kindly provided is very relevant. Unfortunately I found a minor problem with it:
+> * The two middle values in the transition table should be 0x91, 0x9b respectively
+> * I think that it would be helpful for future viewers if you included information about event "IDs" (0 - short space, 2 - short pulse, 4 - long space, 6 - long pulse)
+>
+> [...]
+>
+> PS I found it crucial to continue decoding until "start1" is reached. Mid0 is reached naturally, however, the algorithm stops (emits last digit) at mid1 which prevents the last edge change from being processed. In certain situations this can lead to a permanent deadlock.
  
 Copyright &copy; 2011 Filip Sobalski <pinkeen@gmail.com>
