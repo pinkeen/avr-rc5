@@ -30,7 +30,7 @@ Check out the comments in headers/source. Example in `main.{c,h}` included.
 
 ## Does it work?
 
-Yes, it does work flawlessly (at least for me). I built a project on it ([rlamp](http://add-a-link-to-github)) and never had any problems. The sensitivity achieved
+Yes, it does work flawlessly (at least for me). I built a project on it ([rlamp](https://github.com/pinkeen/rlamp)) and never had any problems. The sensitivity achieved
 with __TSOP2236__ was astounding. I could point the remote anywhere, metres from the receiver and it would pick up
 the signal perfectly with every keypress.
 
@@ -46,5 +46,24 @@ in case it might be helpful:
 > [...]
 >
 > PS I found it crucial to continue decoding until "start1" is reached. Mid0 is reached naturally, however, the algorithm stops (emits last digit) at mid1 which prevents the last edge change from being processed. In certain situations this can lead to a permanent deadlock.
- 
+
+## LICENSE
+
 Copyright &copy; 2011 Filip Sobalski <pinkeen@gmail.com>
+avr-rc5 - RC5 Decoding library for AVR 
+
+This file is part of avr-rc5.
+
+Avr-rc5 is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
