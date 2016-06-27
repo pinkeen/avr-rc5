@@ -3,6 +3,10 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
+/* The formula to calculate ticks is as follows 
+ * TICKS = PULSE_LENGTH / (1 / (CPU_FREQ / TIMER_PRESCALER))
+ * Where CPU_FREQ is given in MHz and PULSE_LENGTH in us.
+ * LONG_MIN should usually be SHORT_MAX + 1 */
 #define SHORT_MIN 888   /* 444 microseconds */
 #define SHORT_MAX 2666  /* 1333 microseconds */
 #define LONG_MIN 2668   /* 1334 microseconds */
